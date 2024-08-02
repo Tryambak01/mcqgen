@@ -2,7 +2,8 @@ import os
 import json
 import traceback
 import pandas as pd
-from langchain.chat_models import ChatOpenAI
+#from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from dotenv import load_dotenv
 
 load_dotenv() 
@@ -104,6 +105,25 @@ def generate_mcq(pdf_text, number_of_questions, subject, tone):
         print(cb)
 
     quiz = response.get('quiz')
+
+    quiz_1 = json.loads(quiz)
+
+    quiz_table_data = []
+    for key, value in quiz_1.items():
+        mcq = value["mcq"]
+        options = " | ".join(
+            [
+                f"{option}: {option_value}"
+                for option, option_value in value["options"].items()
+                ]
+            )
+        correct = value["correct"]
+        quiz_table_data.append({"MCQ": mcq, "Choices": options, "Correct": correct})
+
+    quiz_table = pd.DataFrame(quiz_table_data)    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    csv_file_path = os.path.join(script_dir, 'machinelearning.csv')
+    quiz_table.to_csv(csv_file_path, index=False)
 
     return quiz
 
