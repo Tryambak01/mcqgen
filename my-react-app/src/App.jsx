@@ -22,12 +22,16 @@ const App = () => {
         setStage('score');
     };
 
+    const handleGoBack = () => {
+      setStage('landing');
+    };
+
     return (
         <div>
             {stage === 'landing' && <LandingPage onMCQsGenerated={handleMCQsGenerated} />}
             {stage === 'results' && <ResultsPage mcqs={mcqs} onTakeTest={() => setStage('test')} />}
             {stage === 'test' && <TestPage mcqs={mcqs} onSubmit={handleTestSubmit} />}
-            {stage === 'score' && <ScorePage mcqs={mcqs} userAnswers={userAnswers} />}
+            {stage === 'score' && <ScorePage mcqs={mcqs} userAnswers={userAnswers} goBack={handleGoBack}/>}
         </div>
     );
 };

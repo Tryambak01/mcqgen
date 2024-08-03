@@ -2,8 +2,8 @@ import os
 import json
 import traceback
 import pandas as pd
-#from langchain.chat_models import ChatOpenAI
-from langchain_community.chat_models import ChatOpenAI
+from langchain.chat_models import ChatOpenAI
+#from langchain_community.chat_models import ChatOpenAI
 from dotenv import load_dotenv
 
 load_dotenv() 

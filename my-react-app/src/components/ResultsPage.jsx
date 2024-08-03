@@ -23,11 +23,11 @@ const ResultsPage = ({ mcqs, onTakeTest }) => {
     };
 
     return (
-        <div className="flex h-screen items-center justify-center space-x-4">
+        <div className="flex h-screen items-center justify-center space-x-10 bg-gradient-to-b from-indigo-950 via-blue-300 to-slate-200">
             <div className="bg-white shadow-md rounded-lg p-8 w-1/3 flex flex-col items-center">
-                <h2 className="text-xl font-bold mb-4">For Teachers</h2>
-                <p className="text-gray-600 mb-4">
-                    The generated MCQs can be downloaded as a CSV file. Click the button below to download the CSV.
+                <h2 className="text-3xl font-bold mb-4 text-black">For Teachers</h2>
+                <p className="text-gray-800 mb-4 text-base">
+                As a teacher, you can utilize the generated MCQs to create engaging and effective assignments for your students. To get started, simply click the button below to download the CSV. Enhance your assignments with well-crafted, AI-generated MCQs tailored to your educational needs. Download the file now and make your teaching experience even more impactful.
                 </p>
                 <button
                     onClick={downloadCSV}
@@ -37,10 +37,10 @@ const ResultsPage = ({ mcqs, onTakeTest }) => {
                 </button>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg p-8 w-1/3 flex flex-col items-center">
-                <h2 className="text-xl font-bold mb-4">For Students</h2>
-                <p className="text-gray-600 mb-4">
-                    If you are a student, you can take the test by clicking the button below.
+            <div className="bg-indigo-950 shadow-md rounded-lg p-8 w-1/3 flex flex-col items-center">
+                <h2 className="text-3xl font-bold mb-4 text-white">For Students</h2>
+                <p className="text-white mb-4">
+                As a student, you can take the test by clicking the button below. This feature allows you to instantly start the exam, and upon completion, your test will be evaluated automatically. Your scores will be provided at the end, giving you immediate feedback on your performance. Begin your test now and experience the ease and efficiency of this automated evaluation system.
                 </p>
                 <button
                     onClick={onTakeTest}

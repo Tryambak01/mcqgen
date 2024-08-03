@@ -32,7 +32,7 @@ const LandingPage = ({ onMCQsGenerated }) => {
             <div className="w-1/3 bg-indigo-950 flex flex-col rounded-md items-center justify-center p-4">
                 <div className="w-full flex flex-col items-center">
                     <img src="./src/assets/GAT-logo.png" alt="Logo" className="mb-4 w-12 h-12" />
-                    <h1 className="text-2xl font-bold mb-2">MCQ Generator</h1>
+                    <h1 className="text-2xl font-bold mb-2">QuizCraft AI</h1>
                 </div>
                 <div className="text-center">
                     <p className="text-white text-lg">
@@ -40,8 +40,8 @@ const LandingPage = ({ onMCQsGenerated }) => {
                     </p>
                 </div>
             </div>
-            <div className="w-2/3 flex flex-col items-center justify-center bg-slate-50">
-                <h2 className="text-2xl font-bold text-black mb-4">Customize</h2>
+            <div className="w-2/3 flex flex-col items-center justify-center bg-gradient-to-b from-slate-200 via-slate-100 to-slate-50">
+                <h2 className="text-2xl font-bold text-black mb-4">MCQ Generator</h2>
                 <div className="bg-white shadow-xl rounded-2xl p-8">
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
