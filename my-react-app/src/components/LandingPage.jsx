@@ -24,6 +24,7 @@ const LandingPage = ({ onMCQsGenerated }) => {
             }
         });
         setLoading(false);
+        console.log(response.data);
         onMCQsGenerated(response.data);
     };
 

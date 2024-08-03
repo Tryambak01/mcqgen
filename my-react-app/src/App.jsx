@@ -13,6 +13,7 @@ const App = () => {
     const [userAnswers, setUserAnswers] = useState(null);
 
     const handleMCQsGenerated = (mcqs) => {
+        console.log("test : mcq has been set");
         setMcqs(mcqs);
         setStage('results');
     };
@@ -26,12 +27,17 @@ const App = () => {
       setStage('landing');
     };
 
+    const handleTakeTest = () => {
+      console.log('test stage is set')
+      setStage('test');
+    };
+
     return (
         <div>
-            {stage === 'landing' && <LandingPage onMCQsGenerated={handleMCQsGenerated} />}
-            {stage === 'results' && <ResultsPage mcqs={mcqs} onTakeTest={() => setStage('test')} />}
-            {stage === 'test' && <TestPage mcqs={mcqs} onSubmit={handleTestSubmit} />}
-            {stage === 'score' && <ScorePage mcqs={mcqs} userAnswers={userAnswers} goBack={handleGoBack}/>}
+            {stage == 'landing' && <LandingPage onMCQsGenerated={handleMCQsGenerated} />}
+            {stage == 'results' && <ResultsPage mcqs={mcqs} onTakeTest = {handleTakeTest} />}
+            {stage == 'test' && <TestPage mcq={mcqs} onSubmit={handleTestSubmit} />}
+            {stage == 'score' && <ScorePage mcq={mcqs} userAnswers={userAnswers} goBack={handleGoBack}/>}
         </div>
     );
 };

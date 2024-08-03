@@ -61,6 +61,9 @@ def generate_mcq(pdf_text, number_of_questions, subject, tone):
         Ensure to make {number} MCQs
         ### RESPONSE_JSON
         {response_json}
+
+        Make sure that the output does not contain any additional text in the beginning and strictly outputs in {response_json} format , this is because i plan to directly use 
+        the generated output into my code.
     """
 
     quiz_generation_prompt = PromptTemplate(
@@ -105,6 +108,8 @@ def generate_mcq(pdf_text, number_of_questions, subject, tone):
         print(cb)
 
     quiz = response.get('quiz')
+
+    print(quiz)
 
     quiz_1 = json.loads(quiz)
 

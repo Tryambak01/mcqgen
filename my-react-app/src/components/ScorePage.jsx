@@ -1,10 +1,12 @@
 import React from 'react';
 
-const ScorePage = ({ mcqs, userAnswers, goBack }) => {
+const ScorePage = ({ mcq, userAnswers, goBack }) => {
     let score = 0;
 
+    const mcqs = JSON.parse(mcq); 
+
     Object.keys(userAnswers).forEach((key) => {
-        if (userAnswers[key] === mcqs[key].correct) {
+        if (userAnswers[key] == mcqs[key].correct) {
             score += 1;
         }
     });

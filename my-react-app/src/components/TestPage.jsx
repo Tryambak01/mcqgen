@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 
-const TestPage = ({ mcqs, onSubmit }) => {
+const TestPage = ({ mcq, onSubmit }) => {
     const [answers, setAnswers] = useState({});
+    console.log(mcq);
 
+    const mcqs = JSON.parse(mcq);
+    console.log(typeof mcqs);
+    console.log("Entered Test Page");
     const handleChange = (question, option) => {
         setAnswers({ ...answers, [question]: option });
     };

@@ -1,0 +1,6 @@
+MCQ,Choices,Correct
+What is the main function of an operating system?,a: Manage computer hardware | b: Provide services for programs | c: Hide hardware complexity | d: All of the above,d
+What is the purpose of a Process Control Block (PCB)?,a: Maintain information about the process | b: Store the program code | c: Manage memory allocation | d: Handle I/O operations,a
+What is the advantage of using Kernel Level Threads over User Level Threads?,a: Thread switching does not require Kernel mode privileges | b: User level thread can run on any operating system | c: Kernel can simultaneously schedule multiple threads from the same process on multiple processors | d: User level threads are faster to create and manage,c
+What is the role of a Dispatcher in Process Scheduling?,a: Selects a process from the queue to execute | b: Transfers a process to the waiting queue | c: Manages memory limits for processes | d: Controls I/O devices allocated to processes,a
+What is the purpose of Distributed Shared Memory (DSM) in a distributed operating system?,a: Hide data movement and simplify data sharing | b: Allow processes to communicate with each other | c: Manage I/O devices | d: Control virtualization of resources,a
